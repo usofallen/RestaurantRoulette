@@ -5,7 +5,7 @@
         link
         text
         target="_blank"
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        href="https://github.com/theZaX/vuetify-lost-and-found"
       >
         Github Repository
         <v-icon right>mdi-open-in-new</v-icon>
