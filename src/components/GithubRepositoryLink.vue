@@ -7,7 +7,7 @@
         target="_blank"
         href="https://github.com/theZaX/vuetify-lost-and-found"
       >
-        Github Repository
+        Zack and Dylan's Github Repository
         <v-icon right>mdi-open-in-new</v-icon>
       </v-btn>
     </div>
