@@ -4,7 +4,7 @@
       <h2 class="font-weight-regular">Personal Dashboard</h2>
 
       <p class='my-2'>
-        Items I Have Lost:
+        Items I Have Lost over and over:
       </p>
 
       <v-row class="mt-2">
