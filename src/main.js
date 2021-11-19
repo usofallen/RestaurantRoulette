@@ -8,12 +8,13 @@ Vue.config.productionTip = false;
 // Import the functions you need from the SDKs you need
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBg3wqkRSYek-59fOGt3uGQC2fA6FklttA",
-  authDomain: "lost-and-found-24934.firebaseapp.com",
-  projectId: "lost-and-found-24934",
-  storageBucket: "lost-and-found-24934.appspot.com",
-  messagingSenderId: "112570119682",
-  appId: "1:112570119682:web:022ed68157415b528ad91b",
+    apiKey: "AIzaSyCxty3sSiH0Wu2O5uV0XAUQMs-YzEihiKI",
+    authDomain: "restaurantroulett.firebaseapp.com",
+    projectId: "restaurantroulett",
+    storageBucket: "restaurantroulett.appspot.com",
+    messagingSenderId: "793178725782",
+    appId: "1:793178725782:web:5c0f2b3693acf0cac591b7",
+    measurementId: "G-93ZJETL6M2"
 };
 
 import firebase from "firebase/app";

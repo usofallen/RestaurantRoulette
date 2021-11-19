@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="clamped">
-      <h2 class="font-weight-regular">Found Things</h2>
+      <h2 class="font-weight-regular">Restaurant Roulette</h2>
 
       <p class="my-2">
-        Found something? Post it
-        <router-link to="/dashboard" style="text-decoration: inherit">
+        Do you like this one?
+        <!--<router-link to="/dashboard" style="text-decoration: inherit">
           here
-        </router-link>
+        </router-link>-->
       </p>
 
       <v-row class="mt-2">
@@ -51,7 +51,7 @@ export default {
 
   methods: {
     async fetchItems() {
-      const documentRef = firebase.firestore().collection("found");
+      const documentRef = firebase.firestore().collection("Restaurants");
 
       const foundCollection = await documentRef.get();
 
