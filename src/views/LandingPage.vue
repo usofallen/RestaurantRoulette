@@ -13,7 +13,7 @@
       <h2 class="font-weight-regular">Where BYU Students Look First.</h2>
 
       <p class="my-2">
-        Lost something? Post it
+        Lost something? Post it (Danny changed this)
         <em><router-link to="/dashboard" style="text-decoration: inherit">
           here
         </router-link></em>
