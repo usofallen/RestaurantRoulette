@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="span4">
-        <img class="center-block" src="../assets/photo-1585156569731-4c5b959234f7.jpg" />
+        <img class="center-block" src="..\assets\blind bite stacked logo black-04.png" />
       </div>
     </div>
 

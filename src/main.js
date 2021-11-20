@@ -19,8 +19,10 @@ const firebaseConfig = {
 
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+//const db = getFirestore();
 
 new Vue({
   router,
