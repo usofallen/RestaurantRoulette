@@ -5,9 +5,9 @@
         link
         text
         target="_blank"
-        href="https://github.com/theZaX/vuetify-lost-and-found"
+        href="https://github.com/usofallen/RestaurantRoulette"
       >
-        Zack and Dylan's Github Repository
+        Check out our Github Repository
         <v-icon right>mdi-open-in-new</v-icon>
       </v-btn>
     </div>

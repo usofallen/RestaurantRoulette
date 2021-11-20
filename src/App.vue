@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="#FFFFFF" dark>
       <div class="d-flex align-center">
         <router-link to="/">
           <v-img
             alt="Hyperfind Logo"
             contain
-            src="@/assets/logo.svg"
+            src="@/assets/blind bite logo 1.png"
             transition="scale-transition"
             width="200"
           />
@@ -32,7 +32,7 @@
           <v-img
             alt="Vuetify Logo"
             contain
-            src="@/assets/logo.svg"
+            src="@/assets/blind bite logo 1.png"
             transition="scale-transition"
             width="200"
           />
