@@ -10,38 +10,18 @@
       </div>
     </div>
 
-      <h2 class="font-weight-regular">Where BYU Students Look First.</h2>
+      <h2 class="font-weight-regular">What is Blind Bite?</h2>
+
+      <h3>Blind Bite is an app that encourages adventure and enables decision making in one's search for new cuisine </h3>
 
       <p class="my-2">
-        Lost something? Post it (Danny changed this)
-        <em><router-link to="/dashboard" style="text-decoration: inherit">
+        Want a restaurant recommendation? click
+        <em><router-link to="/found" style="text-decoration: inherit">
           here
         </router-link></em>
       </p>
-
-      <p class="my-2">
-        Looking for something? Click
-        <em><router-link to="/found" style="text-decoration:inherit">
-          here
-        </router-link></em>
-      </p>
-
-      <h3>Why Did We Make this Website?</h3>
-
-      <p>Ever since we were kids, we have been known to consistantly lose just about anything
-        we had in our possesion. We would lose anything from our car keys to our brand new pair of shoes!
-          I decided it was time for the schenanegans to be over, so we (Zack and Dylan) created this 
-          website. Here, if you lose anything on or off campus (in the general vicinity of BYU), we 
-          want people to post what was lost or found here! That way there is one source to come to for 
-          any lost (or found) Items in the area. If you would like to learn more, are looking for something, 
-          or have found something, you have come to the right place! Use our Menu to navigate our website and see
-          any current postings. 
-      </p>
-
-      <h3>Important API Notice</h3>
-
-      <p>The API we are using is one we created on Firebase. Malcom (the TA) reccomended that I make note that it is not a large database 
-          we are using, but one we created ourselves. The API is being accessed mainly in the <em>Found Items</em> tab. Thank you! :)
+        
+      <p>
       </p>
     </div>
   </div>
@@ -70,11 +50,11 @@ export default {
 
   h2 {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 
   h3 {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
 </style>
