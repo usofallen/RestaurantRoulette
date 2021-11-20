@@ -10,20 +10,19 @@
       </div>
     </div>
 
-      <h2 class="font-weight-regular">If you don't care, why not eat anywhere?</h2>
+      <h2 class="font-weight-regular">What is Blind Bite?</h2>
+
+      <h3>Blind Bite is an app that encourages adventure and enables decision making in one's search for new cuisine </h3>
 
       <p class="my-2">
-        Get a random recommendation
+        Want a restaurant recommendation? click
         <em><router-link to="/found" style="text-decoration: inherit">
           here
         </router-link></em>
       </p>
-
-      <h3>Why Did We Make this Website?</h3>
-
-      <p>Details about our process that Dylan will add...
+        
+      <p>
       </p>
-
     </div>
   </div>
 </template>
@@ -51,11 +50,11 @@ export default {
 
   h2 {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 
   h3 {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
 </style>
