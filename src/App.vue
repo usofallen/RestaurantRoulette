@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="#FFFFFF" dark>
+    <v-app-bar app color="#ebf5e3" dark>
       <div class="d-flex align-center">
         <router-link to="/">
           <v-img
@@ -93,3 +93,8 @@ export default {
   }),
 };
 </script>
+<style>
+    i.v-icon.v-icon {
+        color: red;
+    }
+</style>
