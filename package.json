@@ -42,7 +42,7 @@
     },
     "rules": {
       "no-unused-vars": "off",
-      "no-unused-components": "off",
+      "no-unused-components": "off"
     }
   },
   "browserslist": [

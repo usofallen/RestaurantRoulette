@@ -18,7 +18,7 @@
                     <v-card-text>
                         <v-row align="center"
                                class="mx-0">
-                            <v-rating :value="this.curItem.Rating"
+                            <v-rating :value="parseInt(this.curItem.Rating)"
                                       color="amber"
                                       dense
                                       half-increments
@@ -41,10 +41,17 @@
                     <v-row align="center"
                            class="mx-0">
                         <v-card-actions>
+                            <v-btn color="deep-purple lighten-2"
+                                   text
+                                   @click="selectNo">
+                                Not feelin' it
+                            </v-btn>
+                        </v-card-actions>
+                        <v-card-actions>
                             <v-btn text
                                    color="deep-purple lighten-2"
-                                   @click="reveal = true">
-                                Yes
+                                   @click="selectYes">
+                                Heck, why not
                             </v-btn>
                         </v-card-actions>
 
@@ -90,13 +97,7 @@
                                 </v-card-actions>
                             </v-card>
                         </v-expand-transition>
-                        <v-card-actions>
-                            <v-btn color="deep-purple lighten-2"
-                                   text
-                                   @click="selectNo">
-                                No
-                            </v-btn>
-                        </v-card-actions>
+
                     </v-row>
                 </v-card>
 
@@ -155,12 +156,16 @@ export default {
 
       selectYes() {
           console.log("Yes clicked");
+          this.reveal = true;
           //flipped = true;
           this.nextItem();
       },
       selectNo() {
 
           this.nextItem();
+      },
+      reserve() {
+          console.log("Reserving restaurant...");
       },
 
       nextItem() {
