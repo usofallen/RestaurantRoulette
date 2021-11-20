@@ -79,13 +79,13 @@ export default {
         icon: "mdi-home",
         route: "/",
       },
+      //{
+      //  title: "Dashboard",
+      //  icon: "mdi-view-dashboard",
+      //  route: "/dashboard",
+      //},
       {
-        title: "Dashboard",
-        icon: "mdi-view-dashboard",
-        route: "/dashboard",
-      },
-      {
-        title: "Found Items",
+        title: "Restaurant Finder",
         icon: "mdi-file-find-outline",
         route: "/found",
       },
