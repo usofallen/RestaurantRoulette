@@ -35,7 +35,7 @@
                             {{this.curItem.Price}}
                         </div>
 
-                        <div>{{this.curItem.Description}}</div>
+                        <div align="left">{{this.curItem.Description}}</div>
                     </v-card-text>
 
 
@@ -61,10 +61,11 @@
                                     class="transition-fast-in-fast-out v-card--reveal"
                                     style="height: 100%;">
                                 <v-card-text class="pb-0">
-                                    <p class="text-h4 text--primary">
+                                    <p class="text-h4 text--primary"
+                                       align="center">
                                         {{this.curItem.Name}}
                                     </p>
-                                    <p>{{this.curItem.Description}}</p>
+                                    <p align="center">{{this.curItem.Description}}</p>
                                 </v-card-text>
                                 <v-card-title>Tonight's availability</v-card-title>
 
@@ -140,7 +141,48 @@
     import "firebase/firestore";
     import { doc, setDoc } from "firebase/firestore"; 
 
+    var axios = require('axios');
+    var restaurants = [];
 
+
+    //TODO change url for location
+    var config = {
+        method: 'get',
+        url: "https://maps.googleapis.com/maps/api/place/search/json?location=40.23384%2C-111.658531&radius=1500&keyword=restaurant&sensor=false&key=AIzaSyB3gmfrJiI2AKcyfKrGV1o45UQHtRseVgE",
+        headers: {}
+    };
+
+    axios(config)
+        .then(function (response) {
+
+            for (var r in response.data.results) {
+                var res = response.data.results[r];
+                //console.log(res.name)
+                restaurants.push({
+                    Id: res.place_id,
+                    Name: res.name,
+                    Rating: res.rating,
+                    Price: "$".repeat(res.price_level - 1) + "$",
+                    Photos: res.photos[0],
+                    Image: "https://maps.googleapis.com/maps/api/place/photo" +
+                        "?maxwidth=400" +
+                        "&photo_reference=" +
+                        res.photos[0].photo_reference +
+                        "&key=AIzaSyB3gmfrJiI2AKcyfKrGV1o45UQHtRseVgE",
+                    Address: res.vicinity,
+                    Description: res.name + " is a awesome local restaurant in Provo that serve great food and has gotten awesome reviews. They are most famous for their great food and lovely drinks.",
+                    position: res.location,
+                    photos: res.photos,
+                    //menu_url: r.restaurant.menu_url
+                });
+                console.log(res.name)
+
+            }
+            console.log("Found a list of " + restaurants.length);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     //import FlipCard from '../components/FlipCard.vue';
     //import ItemCard from "../components/ItemCard.vue";
 
@@ -190,23 +232,6 @@
                 console.log(this.curItem.Name);
             },
 
-            getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        var currentPosition = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-                        console.log(currentPosition);
-                        //getRestaurantsList(currentPosition);
-                        return currentPosition;
-                        //setCurrentLocation()
-
-                    });
-                } else {
-                    alert("Geolocation is not supported by this browser.");
-                }
-            },
 
             async addFile(res) {
                 await setDoc(doc(db, "Restaurants", "LA"), {
@@ -219,7 +244,6 @@
             async getRestaurantList () {
                 var axios = require('axios');
                 var restaurants = [];
-                this.items = [];
                 
                 var config = {
                     method: 'get',
@@ -247,12 +271,7 @@
 
 
                         }
-                        console.log("Resturning a list of " + restaurants.length)
-                        this.items = restaurants;
-                        this.curInd = 0;
-                        this.curItem = this.items[this.curInd];
-
-                        //return restaurants;
+                        console.log("Found a list of " + restaurants.length)
 
                     })
                     .catch(function (error) {
@@ -274,19 +293,9 @@
                     };
                 });
 
-                this.items = items;
+                this.items = restaurants;
                 this.curInd = 0;
                 this.curItem = this.items[this.curInd];
-
-                setTimeout(() => { this.items = this.getRestaurantList(); }, 2000);
-                
-                
-                //for (var i in this.res) {
-                //    this.items.push(i);
-                //}
-                //let res = await this.getRestaurantList();
-                //console.log(res);
-                
 
                 console.log(foundCollection.docs.map((doc) => doc.data()));
             },
@@ -297,9 +306,9 @@
         //},
 
         mounted() {
-            this.getRestaurantList();
+            //this.getRestaurantList();
 
-            //this.fetchItems();
+            this.fetchItems();
             //this.defer();
         },
     };
