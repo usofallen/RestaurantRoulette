@@ -16,7 +16,7 @@
       <v-spacer></v-spacer>
 
       <v-btn @click="drawerOpen = !drawerOpen" small fab target="_blank" text>
-        <v-icon>mdi-menu</v-icon>
+        <v-icon color ="black">mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -49,7 +49,7 @@
           :to="item.route"
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="black">{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
